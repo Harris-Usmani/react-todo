@@ -1,38 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* Global */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* App Class */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Class */
+.Sidebar {
+  width: 300px;
+  min-width: 210px;
+  height: 100%;
+}
+
+/* Main - Set your background and logo over here*/
+.Main {
+  background-image: url('./media/pexels-raphael-loquellano-9060351.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* User */
+.User {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+/* CSS for the logo */
+.User .logo img {
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+/* CSS for the user info */
+.User .info {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* CSS for the logout button */
+.User .info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* CSS for Add New Todo Component */
+.AddNewTodo {
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* CSS for the .btn div */
+.AddNewTodo .btn {
+  padding: 1rem;
+  width: 100%;
+  height: 70px;
+}
+
+/* CSS for the new todo button */
+.AddNewTodo .btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  background-color: #0080ff;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.AddNewTodo .btn button:hover {
+  filter: brightness(1.1);
+  transition: all 300ms ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Modal styling */
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.Modal .container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background-color: white;
 }
